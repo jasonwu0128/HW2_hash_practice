@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/12W4RoR1LP9XCxe134CbdFTGUZE43AqL_
 """
 
-with open('hw2_data.txt',mode='r') as fd: #with/as可以在處理完後自行關閉close()檔案，更方便 r是開啟唯讀的檔案
+with open('hw2_data.txt',mode='r') as fd: #with/as可以在處理完後自行關閉close()檔案，更方便。 r是開啟唯讀檔案的模式
   line = fd.readlines()       #檔案.readlines()可以讀取檔案的每一行，將每一行內容轉換成串列的一個項目
 my_dict = {}               #readlines的s要小心不要忘記，readline會變成讀取一行中幾個字母
 for i in range(0,len(line)):
