@@ -22,19 +22,3 @@ print('不重複的英文字有'+str(len(my_dict))+'個') #有幾個不重複的
 for word in sorted(my_dict):    #不重複的英文字分別有幾個
   times = my_dict[word]
   print('{}出現{}次'.format(word,times))
-
-with open('test1.txt',mode='r') as ft:   #測試用
-  linet = ft.readlines()
-my_tdict = {}
-for i in range(0,len(linet)):
-  sure = int(my_tdict.get(linet[i].strip(),0))  
-  print(linet[i])                                               
-  if sure == 0:
-    my_tdict[linet[i].strip()] = 1                
-  elif sure != 0:
-    my_tdict[linet[i].strip()]+= 1
-  else:
-    print('error')
-  
-print(len(linet))
-print(my_tdict)
